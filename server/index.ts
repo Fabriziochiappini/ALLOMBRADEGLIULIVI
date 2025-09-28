@@ -1,10 +1,43 @@
 import express, { type Request, Response, NextFunction } from "express";
+import session from "express-session";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+
+declare module "express-session" {
+  interface SessionData {
+    userId?: string;
+    username?: string;
+    role?: string;
+  }
+}
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// Handle session secret securely based on environment
+let sessionSecret = process.env.SESSION_SECRET;
+if (!sessionSecret) {
+  if (process.env.NODE_ENV === 'production') {
+    console.error('SECURITY ERROR: SESSION_SECRET environment variable is required in production');
+    process.exit(1);
+  } else {
+    sessionSecret = 'dev-secret-for-villa-admin-12345-change-in-prod';
+    console.warn('WARNING: Using default session secret in development. Set SESSION_SECRET environment variable for production.');
+  }
+}
+
+// Configure session middleware
+app.use(session({
+  secret: sessionSecret,
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    secure: process.env.NODE_ENV === 'production', // Secure cookies in production
+    httpOnly: true,
+    maxAge: 24 * 60 * 60 * 1000 // 24 hours
+  }
+}));
 
 app.use((req, res, next) => {
   const start = Date.now();

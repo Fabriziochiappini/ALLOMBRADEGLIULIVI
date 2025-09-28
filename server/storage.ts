@@ -8,6 +8,7 @@ import {
   type Setting, type InsertSetting
 } from "@shared/schema";
 import { randomUUID } from "crypto";
+import bcrypt from "bcrypt";
 
 export interface IStorage {
   // Users
@@ -81,6 +82,26 @@ export class MemStorage implements IStorage {
     this.photos = new Map();
     this.reviews = new Map();
     this.settings = new Map();
+    
+    // Create default admin user for testing
+    this.initializeDefaultData();
+  }
+  
+  private async initializeDefaultData() {
+    // Create default admin user with hashed password
+    const defaultPassword = "admin123";
+    const hashedPassword = await bcrypt.hash(defaultPassword, 12);
+    
+    const defaultAdmin = {
+      username: "admin",
+      password: hashedPassword,
+      role: "admin" as const
+    };
+    
+    const adminUser = await this.createUser(defaultAdmin);
+    console.log(`Default admin user created: ${adminUser.username}`);
+    console.log('IMPORTANT: Default admin username is "admin" with default password.');
+    console.log('WARNING: Change the default password immediately in production!');
   }
 
   // Users
