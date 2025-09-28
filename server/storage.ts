@@ -17,6 +17,7 @@ export interface IStorage {
 
   // Content Sections
   getAllContentSections(): Promise<ContentSection[]>;
+  getContentSection(id: string): Promise<ContentSection | undefined>;
   getContentSectionByKey(key: string): Promise<ContentSection | undefined>;
   createContentSection(section: InsertContentSection): Promise<ContentSection>;
   updateContentSection(id: string, section: Partial<InsertContentSection>): Promise<ContentSection | undefined>;
@@ -108,6 +109,10 @@ export class MemStorage implements IStorage {
   // Content Sections
   async getAllContentSections(): Promise<ContentSection[]> {
     return Array.from(this.contentSections.values()).sort((a, b) => a.key.localeCompare(b.key));
+  }
+
+  async getContentSection(id: string): Promise<ContentSection | undefined> {
+    return this.contentSections.get(id);
   }
 
   async getContentSectionByKey(key: string): Promise<ContentSection | undefined> {
