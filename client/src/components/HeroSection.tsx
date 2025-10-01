@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ChevronLeft, ChevronRight, Star, Users, Wifi, Car, PawPrint, Wind } from "lucide-react";
-import heroImage from "@assets/generated_images/Villa_hero_with_pool_62d71323.png";
-import oliveGroveImage from "@assets/generated_images/Puglia_olive_grove_landscape_93e62c66.png";
+import heroImage from "@assets/WhatsApp Image 2025-09-25 at 10.56.42 (1)_1759071455441.jpeg";
+import poolImage from "@assets/WhatsApp Image 2025-09-25 at 10.56.43_1759071455441.jpeg";
 import interior1 from "@assets/Immagine 2025-09-28 164834_1759071422097.png";
 import exterior1 from "@assets/Immagine 2025-09-28 164315_1759071422103.png";
 
@@ -18,9 +18,9 @@ const HeroSection = () => {
       subtitle: "Villa con Piscina in Puglia"
     },
     {
-      image: oliveGroveImage,
-      title: "Tra gli Ulivi Secolari",
-      subtitle: "Relax e Natura"
+      image: poolImage,
+      title: "Piscina Privata",
+      subtitle: "Relax e Refrigerio"
     },
     {
       image: interior1,
