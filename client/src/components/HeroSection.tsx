@@ -162,7 +162,6 @@ const HeroSection = () => {
         <div className="space-y-4">
           <div>
             <h3 className="font-serif text-xl font-semibold text-foreground">Prenota il Tuo Soggiorno</h3>
-            <p className="text-muted-foreground">Da €120/notte</p>
           </div>
           
           <div className="grid grid-cols-2 gap-3">

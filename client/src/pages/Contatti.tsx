@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import DiscountBanner from "@/components/DiscountBanner";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -77,6 +78,7 @@ export default function Contatti() {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
+      <DiscountBanner />
       
       {/* Hero Section */}
       <section className="relative h-96">

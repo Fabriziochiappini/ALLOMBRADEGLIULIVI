@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import DiscountBanner from "@/components/DiscountBanner";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -209,6 +210,7 @@ export default function Villa() {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
+      <DiscountBanner />
       
       {/* Hero Section */}
       <section className="relative h-96">
