@@ -72,11 +72,11 @@ export default function ComeRaggiungerci() {
                     <div>
                       <h4 className="font-semibold mb-2">Aeroporto di Bari</h4>
                       <p className="text-muted-foreground text-sm mb-2">
-                        Alternativa con più voli (80 km - 1 ora)
+                        Alternativa con più voli (100 km - 1h 15min)
                       </p>
                       <div className="flex gap-2">
-                        <Badge variant="secondary">80 km</Badge>
-                        <Badge variant="secondary">1h</Badge>
+                        <Badge variant="secondary">100 km</Badge>
+                        <Badge variant="secondary">1h 15min</Badge>
                       </div>
                     </div>
                   </div>
@@ -100,9 +100,9 @@ export default function ComeRaggiungerci() {
                     <div>
                       <h4 className="font-semibold mb-2">Dall'Aeroporto di Bari</h4>
                       <p className="text-muted-foreground text-sm mb-2">
-                        A14 direzione Bari Sud, poi SS16 verso Brindisi
+                        SS16 in direzione Brindisi, uscita per Latiano
                       </p>
-                      <Badge variant="secondary">Autostrada A14</Badge>
+                      <Badge variant="secondary">SS16</Badge>
                     </div>
                   </div>
                 </CardContent>
@@ -173,8 +173,8 @@ export default function ComeRaggiungerci() {
                   </div>
                   <div className="text-center p-4 border rounded-lg">
                     <h4 className="font-semibold">Lecce</h4>
-                    <p className="text-muted-foreground">45 km</p>
-                    <Badge variant="secondary">45 min</Badge>
+                    <p className="text-muted-foreground">50 km</p>
+                    <Badge variant="secondary">50 min</Badge>
                   </div>
                   <div className="text-center p-4 border rounded-lg">
                     <h4 className="font-semibold">Alberobello</h4>
