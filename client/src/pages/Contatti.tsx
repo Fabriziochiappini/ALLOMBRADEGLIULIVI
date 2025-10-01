@@ -131,9 +131,12 @@ export default function Contatti() {
                       <span className="font-medium">All'Ombra degli Ulivi</span>
                     </div>
                     <div className="text-muted-foreground">
+                      Contrada La speccia SNC
+                    </div>
+                    <div className="text-muted-foreground">
                       Latiano (BR), Puglia
                     </div>
-                    <Badge variant="outline">Coordinate GPS su richiesta</Badge>
+                    <Badge variant="outline">Parcheggio privato incluso</Badge>
                   </div>
                 </CardContent>
               </Card>

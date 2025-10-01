@@ -142,10 +142,8 @@ export default function ComeRaggiungerci() {
                   <div className="space-y-3">
                     <div>
                       <h4 className="font-semibold">All'Ombra degli Ulivi</h4>
+                      <p className="text-muted-foreground">Contrada La speccia SNC</p>
                       <p className="text-muted-foreground">Latiano (BR), Puglia</p>
-                    </div>
-                    <div className="text-sm text-muted-foreground">
-                      <p>Coordinate GPS fornite al momento della prenotazione</p>
                     </div>
                     <Badge variant="outline">Parcheggio privato incluso</Badge>
                   </div>
@@ -193,6 +191,43 @@ export default function ComeRaggiungerci() {
                     <p className="text-muted-foreground">20 km</p>
                     <Badge variant="secondary">20 min</Badge>
                   </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Mappa */}
+            <Card className="mb-8">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <MapPin className="h-6 w-6 text-primary" />
+                  Mappa e Posizione
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="aspect-video w-full rounded-lg overflow-hidden">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.9!2d17.7!3d40.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDMwJzAwLjAiTiAxN8KwNDInMDAuMCJF!5e0!3m2!1sit!2sit!4v1234567890"
+                    width="100%" 
+                    height="100%" 
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Mappa All'Ombra degli Ulivi"
+                  />
+                </div>
+                <div className="mt-4 text-center">
+                  <p className="text-sm text-muted-foreground mb-2">
+                    Contrada La speccia SNC, Latiano (BR)
+                  </p>
+                  <a 
+                    href="https://www.google.com/maps/search/Contrada+La+speccia+Latiano" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline text-sm"
+                  >
+                    Apri in Google Maps →
+                  </a>
                 </div>
               </CardContent>
             </Card>
