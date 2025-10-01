@@ -6,10 +6,7 @@ const CtaSection = () => {
     <section className="py-20 bg-primary/5">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-foreground">
-            Inizia la Tua Esperienza Pugliese
-          </h2>
-          <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <p className="text-2xl md:text-3xl text-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
             Scopri tutti gli spazi della villa o contattaci direttamente per prenotare il tuo soggiorno 
             indimenticabile nel cuore della Puglia.
           </p>
