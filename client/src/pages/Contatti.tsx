@@ -46,11 +46,7 @@ export default function Contatti() {
     setIsSubmitting(true);
 
     try {
-      await apiRequest('/api/contact', {
-        method: 'POST',
-        body: JSON.stringify(formData),
-        headers: { 'Content-Type': 'application/json' }
-      });
+      await apiRequest('POST', '/api/contact', formData);
 
       toast({
         title: "Richiesta Inviata!",
