@@ -24,7 +24,7 @@ import latianoImg from "@assets/latiano borgo_1759309564405.jpg";
 import mesagneImg from "@assets/mesagne_1759309564405.webp";
 import francavillaImg from "@assets/francavilla fontana_1759309564404.jpg";
 import oriaImg from "@assets/oria città medievale_1759309564402.jpg";
-import torreGuacetoImg from "@assets/marine carovigno_1759309564400.jpg";
+import torreGuacetoImg from "@assets/torre guaceto riserva naturale_1759310477442.jpg";
 import carovignoImg from "@assets/marine carovigno_1759309564400.jpg";
 import ostuniImg from "@assets/ostuni città bianca_1759309564398.jpg";
 import alberobelloImg from "@assets/alberobello_1759309564397.jpg";
@@ -32,6 +32,7 @@ import locorotondoImg from "@assets/locorotondo_1759309564396.jpg";
 import cisterninoImg from "@assets/cisternino_1759309564395.webp";
 import laFeraImg from "@assets/la fera latiano_1759309564393.jpg";
 import sagraStacchioddiImg from "@assets/Sagra-stacchioddi-latiano_1759309564392.jpg";
+import festaInMasseriaImg from "@assets/image_1759310458303.png";
 import prodottiTipiciImg from "@assets/Prodotti_tipici_della_Puglia_1759309564389.png";
 import cantineFrantoiImg from "@assets/cantine e frantoi puglia_1759309564383.jpg";
 
@@ -556,9 +557,11 @@ const Dintorni = () => {
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <div className="bg-primary/5 rounded-md h-40 flex items-center justify-center border-2 border-dashed border-primary/20">
-                    <p className="text-muted-foreground text-sm text-center px-4">🎵 Festa in Masseria - Agosto</p>
-                  </div>
+                  <img 
+                    src={festaInMasseriaImg} 
+                    alt="Festa in Masseria evento tradizionale" 
+                    className="rounded-md h-40 w-full object-cover"
+                  />
                   <Badge variant="outline">32ª edizione</Badge>
                   <p className="text-muted-foreground">
                     Evento unico presso Masseria Marangiosa con canti e balli tradizionali, musiche popolari 
