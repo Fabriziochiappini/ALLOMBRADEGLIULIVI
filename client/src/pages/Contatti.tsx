@@ -3,23 +3,79 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { useToast } from "@/hooks/use-toast";
 import { 
   Phone, 
   MessageCircle, 
   Mail, 
   MapPin, 
   Clock, 
-  MessageSquare 
+  MessageSquare,
+  Send
 } from "lucide-react";
 import heroImage from "@assets/WhatsApp Image 2025-09-25 at 10.56.47 (1)_1759071455440.jpeg";
+import { useState } from "react";
+import { apiRequest } from "@/lib/queryClient";
 
 export default function Contatti() {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    checkIn: '',
+    checkOut: '',
+    guests: '',
+    message: ''
+  });
+
   const handleWhatsApp = () => {
     window.open('https://wa.me/393773938627', '_blank');
   };
 
   const handleCall = () => {
     window.location.href = 'tel:+393773938627';
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      await apiRequest('/api/contact', {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: { 'Content-Type': 'application/json' }
+      });
+
+      toast({
+        title: "Richiesta Inviata!",
+        description: "Ti abbiamo inviato una email di conferma. Ti risponderemo al più presto!",
+      });
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        checkIn: '',
+        checkOut: '',
+        guests: '',
+        message: ''
+      });
+    } catch (error) {
+      toast({
+        title: "Errore",
+        description: "C'è stato un problema nell'invio del messaggio. Riprova o contattaci su WhatsApp.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -169,42 +225,144 @@ export default function Contatti() {
               </Card>
             </div>
 
-            {/* Quick Actions */}
+            {/* Contact Form */}
             <Card className="mb-8">
               <CardHeader>
-                <CardTitle className="text-center">Azioni Rapide</CardTitle>
+                <div className="flex items-center gap-3">
+                  <Mail className="h-6 w-6 text-primary" />
+                  <CardTitle>Richiedi Informazioni</CardTitle>
+                </div>
+                <p className="text-muted-foreground mt-2">
+                  Compila il form e ti risponderemo al più presto. Riceverai una conferma via email.
+                </p>
               </CardHeader>
               <CardContent>
-                <div className="grid md:grid-cols-3 gap-4">
-                  <Button 
-                    onClick={handleWhatsApp} 
-                    size="lg" 
-                    className="h-auto p-4 flex flex-col items-center gap-2"
-                    data-testid="button-quick-whatsapp"
-                  >
-                    <MessageCircle className="h-6 w-6" />
-                    <span>Chatta su WhatsApp</span>
-                  </Button>
-                  <Button 
-                    onClick={handleCall} 
-                    variant="outline" 
-                    size="lg" 
-                    className="h-auto p-4 flex flex-col items-center gap-2"
-                    data-testid="button-quick-call"
-                  >
-                    <Phone className="h-6 w-6" />
-                    <span>Chiama Subito</span>
-                  </Button>
-                  <Button 
-                    variant="secondary" 
-                    size="lg" 
-                    className="h-auto p-4 flex flex-col items-center gap-2"
-                    data-testid="button-quick-info"
-                  >
-                    <MessageSquare className="h-6 w-6" />
-                    <span>Richiedi Info</span>
-                  </Button>
-                </div>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="name">Nome Completo *</Label>
+                      <Input
+                        id="name"
+                        type="text"
+                        placeholder="Mario Rossi"
+                        value={formData.name}
+                        onChange={(e) => setFormData({...formData, name: e.target.value})}
+                        required
+                        data-testid="input-name"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="email">Email *</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="mario.rossi@email.com"
+                        value={formData.email}
+                        onChange={(e) => setFormData({...formData, email: e.target.value})}
+                        required
+                        data-testid="input-email"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="phone">Telefono</Label>
+                      <Input
+                        id="phone"
+                        type="tel"
+                        placeholder="+39 333 123 4567"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                        data-testid="input-phone"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="guests">Numero Ospiti</Label>
+                      <Input
+                        id="guests"
+                        type="number"
+                        min="1"
+                        max="12"
+                        placeholder="2"
+                        value={formData.guests}
+                        onChange={(e) => setFormData({...formData, guests: e.target.value})}
+                        data-testid="input-guests"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="checkIn">Data Check-in</Label>
+                      <Input
+                        id="checkIn"
+                        type="date"
+                        value={formData.checkIn}
+                        onChange={(e) => setFormData({...formData, checkIn: e.target.value})}
+                        data-testid="input-checkin"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="checkOut">Data Check-out</Label>
+                      <Input
+                        id="checkOut"
+                        type="date"
+                        value={formData.checkOut}
+                        onChange={(e) => setFormData({...formData, checkOut: e.target.value})}
+                        data-testid="input-checkout"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Messaggio *</Label>
+                    <Textarea
+                      id="message"
+                      placeholder="Scrivi qui la tua richiesta o domanda..."
+                      rows={6}
+                      value={formData.message}
+                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                      required
+                      data-testid="input-message"
+                    />
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button 
+                      type="submit" 
+                      size="lg"
+                      disabled={isSubmitting}
+                      className="flex-1"
+                      data-testid="button-submit-form"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <span className="animate-pulse">Invio in corso...</span>
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-4 h-4 mr-2" />
+                          Invia Richiesta
+                        </>
+                      )}
+                    </Button>
+                    <Button 
+                      type="button"
+                      variant="outline" 
+                      size="lg"
+                      onClick={handleWhatsApp}
+                      data-testid="button-whatsapp-alternative"
+                    >
+                      <MessageCircle className="w-4 h-4 mr-2" />
+                      O scrivi su WhatsApp
+                    </Button>
+                  </div>
+
+                  <p className="text-sm text-muted-foreground text-center">
+                    * Campi obbligatori. Risponderemo entro 24 ore.
+                  </p>
+                </form>
               </CardContent>
             </Card>
 
@@ -212,20 +370,21 @@ export default function Contatti() {
             <Card className="bg-card/50">
               <CardContent className="p-8 text-center">
                 <h3 className="text-2xl font-serif font-bold mb-4">
-                  Non Esitare a Contattarci
+                  Preferisci il Contatto Diretto?
                 </h3>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Siamo sempre felici di aiutarti a pianificare la tua vacanza perfetta 
-                  in Puglia. Dalle prenotazioni alle raccomandazioni sui luoghi da visitare, 
-                  siamo qui per rendere il tuo soggiorno indimenticabile.
+                  Chiamaci o scrivici su WhatsApp per una risposta immediata. 
+                  Siamo sempre disponibili per assisterti!
                 </p>
                 <div className="flex justify-center gap-4 flex-wrap">
-                  <Badge variant="outline" className="text-lg px-4 py-2">
-                    +39 377 393 8627
-                  </Badge>
-                  <Badge variant="outline" className="text-lg px-4 py-2">
-                    WhatsApp Attivo
-                  </Badge>
+                  <Button onClick={handleWhatsApp} size="lg" data-testid="button-footer-whatsapp">
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    WhatsApp: +39 377 393 8627
+                  </Button>
+                  <Button onClick={handleCall} variant="outline" size="lg" data-testid="button-footer-call">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Chiama Ora
+                  </Button>
                 </div>
               </CardContent>
             </Card>

@@ -12,6 +12,7 @@ import {
 } from "@shared/schema";
 import { ZodError } from "zod";
 import bcrypt from "bcrypt";
+import sgMail from "@sendgrid/mail";
 
 // Helper function for consistent error handling
 function handleError(error: unknown, operation: string, res: any) {
@@ -22,6 +23,11 @@ function handleError(error: unknown, operation: string, res: any) {
     console.error(`Error ${operation}:`, error);
     res.status(500).json({ error: `Failed to ${operation}` });
   }
+}
+
+// Initialize SendGrid
+if (process.env.SENDGRID_API_KEY) {
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 }
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -533,6 +539,74 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Error deleting setting:", error);
       res.status(500).json({ error: "Failed to delete setting" });
+    }
+  });
+
+  // Contact form endpoint
+  app.post("/api/contact", async (req, res) => {
+    try {
+      const { name, email, phone, checkIn, checkOut, guests, message } = req.body;
+
+      if (!name || !email || !message) {
+        return res.status(400).json({ error: "Nome, email e messaggio sono obbligatori" });
+      }
+
+      if (!process.env.SENDGRID_API_KEY) {
+        console.error("SENDGRID_API_KEY not configured");
+        return res.status(500).json({ error: "Email service not configured" });
+      }
+
+      // Email to villa owner
+      const ownerEmail = {
+        to: 'antonelloprete10@gmail.com',
+        from: 'info@webproitalia.com',
+        replyTo: email,
+        subject: `Nuova Richiesta Informazioni - ${name}`,
+        html: `
+          <h2>Nuova Richiesta di Informazioni</h2>
+          <p><strong>Nome:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          ${phone ? `<p><strong>Telefono:</strong> ${phone}</p>` : ''}
+          ${checkIn ? `<p><strong>Check-in:</strong> ${checkIn}</p>` : ''}
+          ${checkOut ? `<p><strong>Check-out:</strong> ${checkOut}</p>` : ''}
+          ${guests ? `<p><strong>Numero Ospiti:</strong> ${guests}</p>` : ''}
+          <p><strong>Messaggio:</strong></p>
+          <p>${message}</p>
+          <hr>
+          <p><em>Puoi rispondere direttamente a questa email per contattare ${name}</em></p>
+        `,
+      };
+
+      // Confirmation email to customer
+      const customerEmail = {
+        to: email,
+        from: 'info@webproitalia.com',
+        subject: 'Richiesta Ricevuta - All\'Ombra degli Ulivi',
+        html: `
+          <h2>Grazie per averci contattato!</h2>
+          <p>Ciao ${name},</p>
+          <p>Abbiamo ricevuto la tua richiesta di informazioni e ti risponderemo al più presto.</p>
+          <p><strong>Riepilogo della tua richiesta:</strong></p>
+          ${checkIn ? `<p><strong>Check-in:</strong> ${checkIn}</p>` : ''}
+          ${checkOut ? `<p><strong>Check-out:</strong> ${checkOut}</p>` : ''}
+          ${guests ? `<p><strong>Numero Ospiti:</strong> ${guests}</p>` : ''}
+          <p><strong>Messaggio:</strong></p>
+          <p>${message}</p>
+          <hr>
+          <p>Nel frattempo, puoi contattarci anche su WhatsApp al <strong>+39 377 393 8627</strong></p>
+          <p>A presto!</p>
+          <p><em>All'Ombra degli Ulivi</em></p>
+        `,
+      };
+
+      // Send both emails
+      await sgMail.send(ownerEmail);
+      await sgMail.send(customerEmail);
+
+      res.json({ success: true, message: "Email inviate con successo" });
+    } catch (error) {
+      console.error("Error sending contact email:", error);
+      res.status(500).json({ error: "Errore nell'invio dell'email" });
     }
   });
 
