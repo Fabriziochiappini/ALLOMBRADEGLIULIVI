@@ -54,8 +54,6 @@ import bathroom2 from "@assets/Immagine 2025-09-28 164513_1759298868423.png";
 import kitchen2 from "@assets/Immagine 2025-09-28 164459_1759298868423.png";
 
 const exteriorPhotos = [
-  { src: poolGarden1, alt: "Piscina e giardino" },
-  { src: poolGarden2, alt: "Vista piscina e ulivi" },
   { src: pool1, alt: "Piscina vista 1" },
   { src: pool2, alt: "Piscina vista 2" },
   { src: pool3, alt: "Area piscina" },
@@ -248,11 +246,31 @@ export default function Villa() {
               La piscina privata, circondata da comodi lettini e ombrelloni, offre il 
               refrigerio perfetto nelle calde giornate estive.
             </p>
-            <p className="text-lg text-muted-foreground text-center leading-relaxed">
+            <p className="text-lg text-muted-foreground text-center leading-relaxed mb-8">
               Il giardino, ombreggiato da ulivi secolari, dispone di un'area barbecue e 
               una zona pranzo all'aperto dove gustare i sapori della tradizione pugliese. 
               Il parcheggio privato garantisce comodità e sicurezza durante tutto il soggiorno.
             </p>
+
+            {/* Foto Piscina e Giardino */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+              <Card className="overflow-hidden hover-elevate">
+                <img
+                  src={poolGarden1}
+                  alt="Piscina e giardino"
+                  className="w-full h-80 object-cover"
+                  data-testid="img-pool-garden-1"
+                />
+              </Card>
+              <Card className="overflow-hidden hover-elevate">
+                <img
+                  src={poolGarden2}
+                  alt="Vista piscina e ulivi"
+                  className="w-full h-80 object-cover"
+                  data-testid="img-pool-garden-2"
+                />
+              </Card>
+            </div>
           </div>
         </div>
       </section>
