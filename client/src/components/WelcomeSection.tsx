@@ -5,7 +5,7 @@ import { MapPin, Star, Heart, Home } from "lucide-react";
 import living1 from "@assets/Immagine 2025-09-28 164834_1759071422097.png";
 import exterior1 from "@assets/Immagine 2025-09-28 164315_1759071422103.png";
 import room1 from "@assets/Immagine 2025-09-28 164525_1759071422101.png";
-import kitchen1 from "@assets/Immagine 2025-09-28 164804_1759071422099.png";
+import newPhoto from "@assets/WhatsApp Image 2025-09-25 at 10.56.44 (1)_1759299070428.jpeg";
 
 const WelcomeSection = () => {
   return (
@@ -114,8 +114,8 @@ const WelcomeSection = () => {
             </Card>
             <Card className="overflow-hidden hover-elevate">
               <img
-                src={kitchen1}
-                alt="Cucina moderna"
+                src={newPhoto}
+                alt="Villa esterna"
                 className="w-full h-48 object-cover"
               />
             </Card>
