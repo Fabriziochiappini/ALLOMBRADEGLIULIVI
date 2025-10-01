@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import DiscountBanner from "@/components/DiscountBanner";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -374,6 +375,9 @@ const Dintorni = () => {
           </div>
         </div>
       </section>
+
+      {/* Discount Banner 1 */}
+      <DiscountBanner />
 
       {/* CTA 1 - Dopo Ostuni */}
       <section className="py-12 bg-primary/5">
@@ -856,6 +860,9 @@ const Dintorni = () => {
           </div>
         </div>
       </section>
+
+      {/* Discount Banner 2 */}
+      <DiscountBanner />
 
       {/* CTA 2 - Dopo Esperienze Uniche */}
       <section className="py-12 bg-gradient-to-r from-primary/10 to-primary/5">
