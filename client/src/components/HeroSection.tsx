@@ -156,52 +156,6 @@ const HeroSection = () => {
           />
         ))}
       </div>
-
-      {/* Booking Card - Floating */}
-      <Card className="absolute top-1/2 right-8 -translate-y-1/2 z-20 p-6 w-80 bg-white/95 backdrop-blur-sm hidden lg:block">
-        <div className="space-y-4">
-          <div>
-            <h3 className="font-serif text-xl font-semibold text-foreground">Prenota il Tuo Soggiorno</h3>
-          </div>
-          
-          <div className="grid grid-cols-2 gap-3">
-            <div>
-              <label className="text-sm font-medium text-foreground">Check-in</label>
-              <div className="mt-1 p-2 border border-border rounded-md bg-background">
-                <input 
-                  type="date" 
-                  className="w-full bg-transparent text-sm"
-                  data-testid="input-checkin"
-                />
-              </div>
-            </div>
-            <div>
-              <label className="text-sm font-medium text-foreground">Check-out</label>
-              <div className="mt-1 p-2 border border-border rounded-md bg-background">
-                <input 
-                  type="date" 
-                  className="w-full bg-transparent text-sm"
-                  data-testid="input-checkout"
-                />
-              </div>
-            </div>
-          </div>
-          
-          <div>
-            <label className="text-sm font-medium text-foreground">Ospiti</label>
-            <select className="w-full mt-1 p-2 border border-border rounded-md bg-background text-sm" data-testid="select-guests">
-              <option value="2">2 ospiti</option>
-              <option value="4">4 ospiti</option>
-              <option value="6">6 ospiti</option>
-              <option value="8">8 ospiti</option>
-            </select>
-          </div>
-          
-          <Button className="w-full" data-testid="button-check-availability">
-            Verifica Disponibilità
-          </Button>
-        </div>
-      </Card>
     </section>
   );
 };
