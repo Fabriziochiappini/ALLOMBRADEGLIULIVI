@@ -12,8 +12,8 @@
 ## Color Palette
 
 ### Primary Colors
-- **Mediterranean Blue**: 210 65% 45% (primary brand color)
-- **Warm Terracotta**: 15 55% 60% (accent for CTAs and highlights)
+- **Pool Blue/Aqua**: 190 70% 50% (primary brand color - evokes the villa's pool and Mediterranean waters)
+- **Deep Blue**: 210 65% 45% (supporting blue tone)
 - **Olive Green**: 75 30% 40% (supporting natural tone)
 
 ### Neutral Foundation
@@ -23,9 +23,9 @@
 - **Light Gray**: 210 8% 85% (borders, dividers)
 
 ### Gradients
-- **Hero Overlay**: Subtle gradient from Mediterranean Blue to transparent over hero images
+- **Hero Overlay**: Subtle gradient from Pool Blue to transparent over hero images
 - **Section Transitions**: Warm cream to white gradients for visual flow
-- **CTA Buttons**: Mediterranean Blue to deeper blue for depth
+- **CTA Buttons**: Pool Blue with subtle depth and elevation on hover
 
 ## Typography
 - **Primary Font**: Playfair Display (elegant headers, villa name)
@@ -60,7 +60,7 @@
 
 ### Forms & CTAs
 - Rounded input fields with subtle borders
-- Primary buttons in terracotta with Mediterranean blue hover
+- Primary buttons in Pool Blue/Aqua with elegant hover elevation
 - WhatsApp integration button with brand green
 
 ## Page Structure
