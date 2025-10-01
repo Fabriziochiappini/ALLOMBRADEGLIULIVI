@@ -8,6 +8,14 @@ const Navigation = () => {
   const [location] = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleWhatsApp = () => {
+    window.open('https://wa.me/393773938627', '_blank');
+  };
+
+  const handleCall = () => {
+    window.location.href = 'tel:+393773938627';
+  };
+
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/villa", label: "La Villa" },
@@ -52,11 +60,11 @@ const Navigation = () => {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center space-x-4">
-          <Button variant="outline" size="sm" data-testid="button-call">
+          <Button variant="outline" size="sm" onClick={handleCall} data-testid="button-call">
             <Phone className="w-4 h-4 mr-2" />
             Chiama Ora
           </Button>
-          <Button size="sm" data-testid="button-whatsapp">
+          <Button size="sm" onClick={handleWhatsApp} data-testid="button-whatsapp">
             WhatsApp
           </Button>
         </div>
@@ -72,11 +80,11 @@ const Navigation = () => {
             <div className="flex flex-col space-y-4 mt-8">
               <NavLinks mobile onClose={() => setIsOpen(false)} />
               <div className="pt-4 border-t border-border space-y-3">
-                <Button variant="outline" className="w-full" data-testid="button-call-mobile">
+                <Button variant="outline" className="w-full" onClick={handleCall} data-testid="button-call-mobile">
                   <Phone className="w-4 h-4 mr-2" />
                   +39 377 393 8627
                 </Button>
-                <Button className="w-full" data-testid="button-whatsapp-mobile">
+                <Button className="w-full" onClick={handleWhatsApp} data-testid="button-whatsapp-mobile">
                   WhatsApp
                 </Button>
               </div>
