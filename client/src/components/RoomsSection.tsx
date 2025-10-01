@@ -8,7 +8,7 @@ import room2 from "@assets/Immagine 2025-09-28 164459_1759071422101.png";
 import room3 from "@assets/Immagine 2025-09-28 164547_1759071422100.png";
 import living1 from "@assets/Immagine 2025-09-28 164834_1759071422097.png";
 import living2 from "@assets/Immagine 2025-09-28 164436_1759071422102.png";
-import kitchen from "@assets/Immagine 2025-09-28 164449_1759071422102.png";
+import kitchen from "@assets/Immagine 2025-09-28 164744_1759299558338.png";
 
 const RoomsSection = () => {
   const amenities = [
