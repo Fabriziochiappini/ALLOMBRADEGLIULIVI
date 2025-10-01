@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Home, MessageCircle } from "lucide-react";
+import { Link } from "wouter";
 
 const CtaSection = () => {
   return (
@@ -11,25 +12,27 @@ const CtaSection = () => {
             indimenticabile nel cuore della Puglia.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button 
-              size="lg" 
-              onClick={() => window.location.href = '/villa'}
-              className="text-lg px-8 py-6"
-              data-testid="button-discover-villa"
-            >
-              <Home className="w-6 h-6 mr-3" />
-              Scopri la Villa
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              onClick={() => window.location.href = '/contatti'}
-              className="text-lg px-8 py-6"
-              data-testid="button-contact-us"
-            >
-              <MessageCircle className="w-6 h-6 mr-3" />
-              Contattaci
-            </Button>
+            <Link href="/villa">
+              <Button 
+                size="lg" 
+                className="text-lg px-8 py-6"
+                data-testid="button-discover-villa"
+              >
+                <Home className="w-6 h-6 mr-3" />
+                Scopri la Villa
+              </Button>
+            </Link>
+            <Link href="/contatti">
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="text-lg px-8 py-6"
+                data-testid="button-contact-us"
+              >
+                <MessageCircle className="w-6 h-6 mr-3" />
+                Contattaci
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
