@@ -142,7 +142,7 @@ export default function ComeRaggiungerci() {
                   <div className="space-y-3">
                     <div>
                       <h4 className="font-semibold">Villa all'Ombra degli Ulivi, Latiano</h4>
-                      <p className="text-muted-foreground">Contrada La speccia SNC</p>
+                      <p className="text-muted-foreground">Contrada La Specchia SNC</p>
                       <p className="text-muted-foreground">Latiano (BR), Puglia</p>
                     </div>
                     <Badge variant="outline">Parcheggio privato incluso</Badge>
@@ -218,10 +218,10 @@ export default function ComeRaggiungerci() {
                 </div>
                 <div className="mt-4 text-center">
                   <p className="text-sm text-muted-foreground mb-2">
-                    Contrada La speccia SNC, Latiano (BR)
+                    Contrada La Specchia SNC, Latiano (BR)
                   </p>
                   <a 
-                    href="https://www.google.com/maps/search/Contrada+La+speccia+Latiano" 
+                    href="https://www.google.com/maps/search/Contrada+La+Specchia+Latiano" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-primary hover:underline text-sm"

@@ -185,7 +185,7 @@ export default function Contatti() {
                       <span className="font-medium">Villa all'Ombra degli Ulivi, Latiano</span>
                     </div>
                     <div className="text-muted-foreground">
-                      Contrada La speccia SNC
+                      Contrada La Specchia SNC
                     </div>
                     <div className="text-muted-foreground">
                       Latiano (BR), Puglia
