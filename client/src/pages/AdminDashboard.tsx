@@ -165,7 +165,7 @@ export default function AdminDashboard() {
               <Home className="h-6 w-6 text-primary" />
               <div>
                 <h1 className="text-lg font-semibold" data-testid="text-dashboard-title">
-                  All'Ombra degli Ulivi - Admin
+                  Villa all'Ombra degli Ulivi, Latiano - Admin
                 </h1>
                 <p className="text-sm text-muted-foreground">
                   Content Management Dashboard

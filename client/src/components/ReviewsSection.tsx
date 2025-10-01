@@ -49,7 +49,7 @@ const ReviewsSection = () => {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             La soddisfazione dei nostri ospiti è la nostra priorità. Leggi le recensioni autentiche 
-            di chi ha già vissuto l'esperienza All'Ombra degli Ulivi.
+            di chi ha già vissuto l'esperienza a Villa all'Ombra degli Ulivi, Latiano.
           </p>
         </div>
 

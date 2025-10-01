@@ -42,7 +42,7 @@ const LocationSection = () => {
   };
 
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Ciao! Sono interessato alla villa All'Ombra degli Ulivi. Potreste darmi informazioni sulla disponibilità?");
+    const message = encodeURIComponent("Ciao! Sono interessato alla Villa all'Ombra degli Ulivi, Latiano. Potreste darmi informazioni sulla disponibilità?");
     window.open(`https://wa.me/${contactInfo.whatsapp.replace(/[^0-9]/g, '')}?text=${message}`, '_blank');
   };
 

@@ -79,7 +79,7 @@ export default function AdminLogin() {
           </div>
           <CardTitle className="text-2xl">Admin Login</CardTitle>
           <CardDescription>
-            Sign in to manage All'Ombra degli Ulivi content
+            Sign in to manage Villa all'Ombra degli Ulivi, Latiano content
           </CardDescription>
         </CardHeader>
         <CardContent>

@@ -20,7 +20,7 @@ const WelcomeSection = () => {
                 Latiano, Puglia
               </Badge>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Benvenuti All'Ombra degli Ulivi
+                Benvenuti a Villa all'Ombra degli Ulivi, Latiano
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Una graziosa villa con piscina in affitto per vacanze in Puglia, immersa tra gli ulivi secolari 

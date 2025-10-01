@@ -4,7 +4,7 @@ import { SiInstagram, SiFacebook } from "react-icons/si";
 
 const Footer = () => {
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Ciao! Sono interessato alla villa All'Ombra degli Ulivi.");
+    const message = encodeURIComponent("Ciao! Sono interessato alla Villa all'Ombra degli Ulivi, Latiano.");
     window.open(`https://wa.me/393773938627?text=${message}`, '_blank');
   };
 
@@ -19,7 +19,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2 space-y-4">
             <div className="font-serif text-2xl font-bold text-primary">
-              All'Ombra degli Ulivi
+              Villa all'Ombra degli Ulivi, Latiano
             </div>
             <p className="text-background/80 leading-relaxed">
               Villa con piscina per vacanze indimenticabili in Puglia. Tra gli ulivi secolari di Latiano, 
@@ -86,7 +86,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-background/20">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="text-background/60 text-sm">
-              © 2024 All'Ombra degli Ulivi. Tutti i diritti riservati.
+              © 2024 Villa all'Ombra degli Ulivi, Latiano. Tutti i diritti riservati.
             </div>
             
             {/* Social Links */}

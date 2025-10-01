@@ -43,7 +43,7 @@ export default function ComeRaggiungerci() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-serif font-bold mb-4 text-foreground">
-                Raggiungere All'Ombra degli Ulivi
+                Raggiungere Villa all'Ombra degli Ulivi, Latiano
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 La villa si trova a Latiano, nel cuore della Puglia, 
@@ -141,7 +141,7 @@ export default function ComeRaggiungerci() {
                 <CardContent>
                   <div className="space-y-3">
                     <div>
-                      <h4 className="font-semibold">All'Ombra degli Ulivi</h4>
+                      <h4 className="font-semibold">Villa all'Ombra degli Ulivi, Latiano</h4>
                       <p className="text-muted-foreground">Contrada La speccia SNC</p>
                       <p className="text-muted-foreground">Latiano (BR), Puglia</p>
                     </div>
@@ -213,7 +213,7 @@ export default function ComeRaggiungerci() {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Mappa All'Ombra degli Ulivi"
+                    title="Mappa Villa all'Ombra degli Ulivi, Latiano"
                   />
                 </div>
                 <div className="mt-4 text-center">

@@ -38,7 +38,7 @@ export default function ChiSiamo() {
                 La Nostra Storia
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                All'Ombra degli Ulivi nasce dalla passione della nostra famiglia 
+                Villa all'Ombra degli Ulivi, Latiano nasce dalla passione della nostra famiglia 
                 per l'ospitalità e l'amore per la terra pugliese.
               </p>
             </div>

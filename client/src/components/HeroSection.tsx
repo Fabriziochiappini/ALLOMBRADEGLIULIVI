@@ -14,8 +14,8 @@ const HeroSection = () => {
   const slides = [
     {
       image: heroImage,
-      title: "All'Ombra degli Ulivi",
-      subtitle: "Villa con Piscina in Puglia"
+      title: "Villa all'Ombra degli Ulivi, Latiano",
+      subtitle: "Casa Vacanza con Piscina in Puglia"
     },
     {
       image: poolImage,

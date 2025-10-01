@@ -180,7 +180,7 @@ export default function Contatti() {
                   </p>
                   <div className="space-y-2">
                     <div>
-                      <span className="font-medium">All'Ombra degli Ulivi</span>
+                      <span className="font-medium">Villa all'Ombra degli Ulivi, Latiano</span>
                     </div>
                     <div className="text-muted-foreground">
                       Contrada La speccia SNC
