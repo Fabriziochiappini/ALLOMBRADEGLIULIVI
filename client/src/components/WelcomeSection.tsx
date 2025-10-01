@@ -2,6 +2,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Heart, Home } from "lucide-react";
 
+import living1 from "@assets/Immagine 2025-09-28 164834_1759071422097.png";
+import exterior1 from "@assets/Immagine 2025-09-28 164315_1759071422103.png";
+import room1 from "@assets/Immagine 2025-09-28 164525_1759071422101.png";
+import kitchen1 from "@assets/Immagine 2025-09-28 164804_1759071422099.png";
+
 const WelcomeSection = () => {
   return (
     <section className="py-16 bg-background">
@@ -88,28 +93,28 @@ const WelcomeSection = () => {
           <div className="grid grid-cols-2 gap-4">
             <Card className="overflow-hidden hover-elevate">
               <img
-                src="/attached_assets/Immagine 2025-09-28 164834_1759071422097.png"
+                src={living1}
                 alt="Soggiorno villa"
                 className="w-full h-48 object-cover"
               />
             </Card>
             <Card className="overflow-hidden hover-elevate">
               <img
-                src="/attached_assets/Immagine 2025-09-28 164315_1759071422103.png"
+                src={exterior1}
                 alt="Terrazza esterna"
                 className="w-full h-48 object-cover"
               />
             </Card>
             <Card className="overflow-hidden hover-elevate">
               <img
-                src="/attached_assets/Immagine 2025-09-28 164525_1759071422101.png"
+                src={room1}
                 alt="Camera da letto"
                 className="w-full h-48 object-cover"
               />
             </Card>
             <Card className="overflow-hidden hover-elevate">
               <img
-                src="/attached_assets/Immagine 2025-09-28 164804_1759071422099.png"
+                src={kitchen1}
                 alt="Cucina moderna"
                 className="w-full h-48 object-cover"
               />

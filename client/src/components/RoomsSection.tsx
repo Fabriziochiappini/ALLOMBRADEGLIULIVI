@@ -3,6 +3,13 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Bed, Bath, Users, Wifi, Wind, Tv, Coffee, Waves } from "lucide-react";
 
+import room1 from "@assets/Immagine 2025-09-28 164525_1759071422101.png";
+import room2 from "@assets/Immagine 2025-09-28 164459_1759071422101.png";
+import room3 from "@assets/Immagine 2025-09-28 164547_1759071422100.png";
+import living1 from "@assets/Immagine 2025-09-28 164834_1759071422097.png";
+import living2 from "@assets/Immagine 2025-09-28 164436_1759071422102.png";
+import kitchen from "@assets/Immagine 2025-09-28 164449_1759071422102.png";
+
 const RoomsSection = () => {
   const amenities = [
     { icon: Wifi, label: "WiFi Gratuito" },
@@ -17,19 +24,19 @@ const RoomsSection = () => {
     {
       title: "Camera Matrimoniale Principale",
       description: "Camera elegante con letto matrimoniale, comunicante con il soggiorno tramite porta.",
-      image: "/attached_assets/Immagine 2025-09-28 164525_1759071422101.png",
+      image: room1,
       features: ["Letto matrimoniale", "Armadio spazioso", "Vista giardino"]
     },
     {
       title: "Camera Matrimoniale 2",
       description: "Seconda camera matrimoniale con arredi moderni e comfort ottimali.",
-      image: "/attached_assets/Immagine 2025-09-28 164459_1759071422101.png",
+      image: room2,
       features: ["Letto matrimoniale", "Climatizzazione", "Finestre panoramiche"]
     },
     {
       title: "Camera Matrimoniale 3",
       description: "Terza camera matrimoniale perfetta per famiglie e gruppi.",
-      image: "/attached_assets/Immagine 2025-09-28 164547_1759071422100.png",
+      image: room3,
       features: ["Letto matrimoniale", "Spazio guardaroba", "Illuminazione naturale"]
     }
   ];
@@ -38,19 +45,19 @@ const RoomsSection = () => {
     {
       title: "Soggiorno 1",
       description: "Ampio soggiorno con divano letto matrimoniale, perfetto per rilassarsi.",
-      image: "/attached_assets/Immagine 2025-09-28 164834_1759071422097.png",
+      image: living1,
       features: ["Divano letto matrimoniale", "TV", "Area conversazione"]
     },
     {
       title: "Soggiorno 2",
       description: "Secondo spazio living con vista sulla piscina e giardino.",
-      image: "/attached_assets/Immagine 2025-09-28 164436_1759071422102.png",
+      image: living2,
       features: ["Zona relax", "Accesso diretto piscina", "Ambiente climatizzato"]
     },
     {
       title: "Cucina",
       description: "Cucina moderna completamente attrezzata con tutto il necessario.",
-      image: "/attached_assets/Immagine 2025-09-28 164449_1759071422102.png",
+      image: kitchen,
       features: ["Elettrodomestici moderni", "Piano cottura", "Zona pranzo"]
     }
   ];
