@@ -1,8 +1,6 @@
-import { MessageCircle, X } from "lucide-react";
-import { useState } from "react";
+import { MessageCircle } from "lucide-react";
 
 const FloatingWhatsApp = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const phoneNumber = "393773938627";
 
   const handleWhatsAppClick = () => {
@@ -11,22 +9,15 @@ const FloatingWhatsApp = () => {
 
   return (
     <>
-      {/* Floating Button */}
+      {/* Floating Button - Più grande e visibile su mobile */}
       <button
         onClick={handleWhatsAppClick}
-        className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 active-elevate-2"
+        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[100] bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full w-16 h-16 md:w-14 md:h-14 flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 animate-pulse-slow"
         aria-label="Contattaci su WhatsApp"
         data-testid="button-floating-whatsapp"
       >
-        <MessageCircle className="w-7 h-7" />
+        <MessageCircle className="w-8 h-8 md:w-7 md:h-7" />
       </button>
-
-      {/* Tooltip (optional) */}
-      <div className="fixed bottom-24 right-6 z-40 pointer-events-none">
-        <div className="bg-foreground text-background px-4 py-2 rounded-lg text-sm font-medium shadow-lg opacity-0 hover:opacity-100 transition-opacity">
-          Chatta con noi
-        </div>
-      </div>
     </>
   );
 };
