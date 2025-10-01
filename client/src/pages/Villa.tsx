@@ -45,6 +45,11 @@ import relax1 from "@assets/WhatsApp Image 2025-09-25 at 10.56.22_1759071455443.
 import relax2 from "@assets/WhatsApp Image 2025-09-25 at 10.56.23_1759071455442.jpeg";
 import relax3 from "@assets/WhatsApp Image 2025-09-25 at 10.56.25_1759071455442.jpeg";
 import relax4 from "@assets/WhatsApp Image 2025-09-25 at 10.56.47_1759071455440.jpeg";
+import dining from "@assets/Immagine 2025-09-28 164755_1759298868420.png";
+import bathroom1 from "@assets/Immagine 2025-09-28 164712_1759298868422.png";
+import bedroom from "@assets/Immagine 2025-09-28 164658_1759298868422.png";
+import bathroom2 from "@assets/Immagine 2025-09-28 164513_1759298868423.png";
+import kitchen2 from "@assets/Immagine 2025-09-28 164459_1759298868423.png";
 
 const exteriorPhotos = [
   { src: pool1, alt: "Piscina vista 1" },
@@ -74,7 +79,12 @@ const relaxPhotos = [
   { src: relax3, alt: "Giardino e relax" },
   { src: relax4, alt: "Zona esterna" },
   { src: pool2, alt: "Piscina e relax" },
-  { src: garden1, alt: "Giardino con ulivi" }
+  { src: garden1, alt: "Giardino con ulivi" },
+  { src: dining, alt: "Sala da pranzo" },
+  { src: bathroom1, alt: "Bagno" },
+  { src: bedroom, alt: "Camera da letto" },
+  { src: bathroom2, alt: "Bagno moderno" },
+  { src: kitchen2, alt: "Cucina e sala pranzo" }
 ];
 
 function PhotoGallery({ photos, title }: { photos: typeof exteriorPhotos; title: string }) {
