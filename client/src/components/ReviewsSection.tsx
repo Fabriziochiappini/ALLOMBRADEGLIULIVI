@@ -66,7 +66,7 @@ const ReviewsSection = () => {
         </div>
 
         {/* Reviews Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {reviews.map((review, index) => (
             <Card key={index} className="p-6 hover-elevate">
               <CardContent className="p-0 space-y-4">
@@ -97,39 +97,6 @@ const ReviewsSection = () => {
             </Card>
           ))}
         </div>
-
-        {/* Overall Rating Card */}
-        <Card className="p-8 bg-primary/5 border-primary/20">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-2 mb-4">
-              <Star className="w-8 h-8 fill-yellow-400 text-yellow-400" />
-              <span className="font-serif text-4xl font-bold text-foreground">5.0</span>
-              <span className="text-xl text-muted-foreground">/5</span>
-            </div>
-            <h3 className="font-serif text-xl font-bold text-foreground mb-2">
-              Eccellente
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Basato su 47 recensioni verificate • 100% feedback positivi
-            </p>
-            
-            {/* Rating Breakdown */}
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-4 text-sm">
-              {[
-                { aspect: "Pulizia", rating: "5.0" },
-                { aspect: "Comunicazione", rating: "5.0" },
-                { aspect: "Check-in", rating: "5.0" },
-                { aspect: "Precisione", rating: "5.0" },
-                { aspect: "Posizione", rating: "4.9" }
-              ].map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className="font-semibold text-foreground">{item.rating}</div>
-                  <div className="text-muted-foreground">{item.aspect}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Card>
       </div>
     </section>
   );
