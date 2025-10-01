@@ -29,6 +29,8 @@ import exterior1 from "@assets/Immagine 2025-09-28 164315_1759071422103.png";
 import exterior2 from "@assets/Immagine 2025-09-28 164335_1759071422103.png";
 import garden1 from "@assets/WhatsApp Image 2025-09-25 at 10.56.46_1759071455441.jpeg";
 import garden2 from "@assets/WhatsApp Image 2025-09-25 at 10.56.47 (1)_1759071455440.jpeg";
+import poolGarden1 from "@assets/image_1759299844556.png";
+import poolGarden2 from "@assets/image_1759299862547.png";
 
 import interior1 from "@assets/Immagine 2025-09-28 164525_1759071422101.png";
 import interior2 from "@assets/Immagine 2025-09-28 164459_1759071422101.png";
@@ -52,6 +54,8 @@ import bathroom2 from "@assets/Immagine 2025-09-28 164513_1759298868423.png";
 import kitchen2 from "@assets/Immagine 2025-09-28 164459_1759298868423.png";
 
 const exteriorPhotos = [
+  { src: poolGarden1, alt: "Piscina e giardino" },
+  { src: poolGarden2, alt: "Vista piscina e ulivi" },
   { src: pool1, alt: "Piscina vista 1" },
   { src: pool2, alt: "Piscina vista 2" },
   { src: pool3, alt: "Area piscina" },
