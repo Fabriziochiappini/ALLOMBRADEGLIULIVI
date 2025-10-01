@@ -49,7 +49,7 @@ const Navigation = () => {
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <div className="font-serif text-xl font-bold text-primary">
-            Villa all'Ombra degli Ulivi, Latiano
+            Villa all'Ombra degli Ulivi
           </div>
         </Link>
 
