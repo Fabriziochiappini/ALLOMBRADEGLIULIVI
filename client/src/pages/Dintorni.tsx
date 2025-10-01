@@ -2,6 +2,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 import { 
   MapPin, 
   Calendar, 
@@ -370,6 +372,28 @@ const Dintorni = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* CTA 1 - Dopo Ostuni */}
+      <section className="py-12 bg-primary/5">
+        <div className="container mx-auto px-4">
+          <Card className="max-w-4xl mx-auto border-primary/20 border-2">
+            <CardContent className="p-8 md:p-12 text-center">
+              <h3 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-4">
+                Pronto a Scoprire la Puglia Autentica?
+              </h3>
+              <p className="text-lg text-muted-foreground mb-6">
+                Villa all'Ombra degli Ulivi è il punto di partenza ideale per esplorare tutte queste meraviglie. 
+                Contattaci per prenotare il tuo soggiorno indimenticabile.
+              </p>
+              <Link href="/contatti">
+                <Button size="lg" className="text-lg px-8" data-testid="button-contact-cta1">
+                  Prenota Ora
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
@@ -830,6 +854,39 @@ const Dintorni = () => {
               </Card>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* CTA 2 - Dopo Esperienze Uniche */}
+      <section className="py-12 bg-gradient-to-r from-primary/10 to-primary/5">
+        <div className="container mx-auto px-4">
+          <Card className="max-w-4xl mx-auto bg-card/95 backdrop-blur border-primary/30 border-2">
+            <CardContent className="p-8 md:p-12 text-center">
+              <Badge variant="secondary" className="mb-4 text-base">
+                <MapPin className="w-4 h-4 mr-2" />
+                Posizione Strategica
+              </Badge>
+              <h3 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-4">
+                Vivi la Tua Vacanza da Sogno nel Cuore della Puglia
+              </h3>
+              <p className="text-lg text-muted-foreground mb-6">
+                Da Villa all'Ombra degli Ulivi, Latiano puoi raggiungere facilmente tutte le meraviglie che hai appena scoperto. 
+                Contattaci per maggiori informazioni su disponibilità e tariffe.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contatti">
+                  <Button size="lg" className="text-lg px-8 w-full sm:w-auto" data-testid="button-contact-cta2">
+                    Richiedi Informazioni
+                  </Button>
+                </Link>
+                <Link href="/villa">
+                  <Button variant="outline" size="lg" className="text-lg px-8 w-full sm:w-auto" data-testid="button-villa-cta2">
+                    Scopri la Villa
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
