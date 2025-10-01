@@ -20,6 +20,20 @@ import {
 } from "lucide-react";
 
 import heroImage from "@assets/WhatsApp Image 2025-09-25 at 10.56.46_1759071455441.jpeg";
+import latianoImg from "@assets/latiano borgo_1759309564405.jpg";
+import mesagneImg from "@assets/mesagne_1759309564405.webp";
+import francavillaImg from "@assets/francavilla fontana_1759309564404.jpg";
+import oriaImg from "@assets/oria città medievale_1759309564402.jpg";
+import torreGuacetoImg from "@assets/marine carovigno_1759309564400.jpg";
+import carovignoImg from "@assets/marine carovigno_1759309564400.jpg";
+import ostuniImg from "@assets/ostuni città bianca_1759309564398.jpg";
+import alberobelloImg from "@assets/alberobello_1759309564397.jpg";
+import locorotondoImg from "@assets/locorotondo_1759309564396.jpg";
+import cisterninoImg from "@assets/cisternino_1759309564395.webp";
+import laFeraImg from "@assets/la fera latiano_1759309564393.jpg";
+import sagraStacchioddiImg from "@assets/Sagra-stacchioddi-latiano_1759309564392.jpg";
+import prodottiTipiciImg from "@assets/Prodotti_tipici_della_Puglia_1759309564389.png";
+import cantineFrantoiImg from "@assets/cantine e frantoi puglia_1759309564383.jpg";
 
 const Dintorni = () => {
   return (
@@ -88,10 +102,11 @@ const Dintorni = () => {
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
-                {/* Placeholder per immagine */}
-                <div className="bg-muted rounded-md h-64 flex items-center justify-center">
-                  <p className="text-muted-foreground">[Immagine Latiano - da fornire]</p>
-                </div>
+                <img 
+                  src={latianoImg} 
+                  alt="Latiano borgo degli Imperiali" 
+                  className="rounded-md h-64 w-full object-cover"
+                />
                 
                 <p className="text-muted-foreground leading-relaxed">
                   Il paese ospita il magnifico <strong>Palazzo Imperiali (XII secolo)</strong>, oggi sede di tre importanti musei:
@@ -129,9 +144,11 @@ const Dintorni = () => {
                   <p className="text-sm text-muted-foreground">Il Castello del Cuore</p>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <div className="bg-muted rounded-md h-48 flex items-center justify-center">
-                    <p className="text-muted-foreground text-sm">[Immagine Mesagne]</p>
-                  </div>
+                  <img 
+                    src={mesagneImg} 
+                    alt="Mesagne castello del cuore" 
+                    className="rounded-md h-48 w-full object-cover"
+                  />
                   <p className="text-muted-foreground text-sm">
                     Mesagne sorprende con il suo centro storico a forma di cuore e il maestoso Castello medievale 
                     con il caratteristico torrione del XV secolo voluto da Giannantonio Balzo Orsini.
@@ -160,9 +177,11 @@ const Dintorni = () => {
                   <p className="text-sm text-muted-foreground">La Città degli Imperiali</p>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <div className="bg-muted rounded-md h-48 flex items-center justify-center">
-                    <p className="text-muted-foreground text-sm">[Immagine Francavilla]</p>
-                  </div>
+                  <img 
+                    src={francavillaImg} 
+                    alt="Francavilla Fontana" 
+                    className="rounded-md h-48 w-full object-cover"
+                  />
                   <p className="text-muted-foreground text-sm">
                     Francavilla Fontana custodisce il magnifico Castello Imperiali, fortezza medievale simbolo della città.
                   </p>
@@ -189,9 +208,11 @@ const Dintorni = () => {
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <div className="bg-muted rounded-md h-64 flex items-center justify-center">
-                    <p className="text-muted-foreground">[Immagine Oria]</p>
-                  </div>
+                  <img 
+                    src={oriaImg} 
+                    alt="Oria città medievale" 
+                    className="rounded-md h-64 w-full object-cover"
+                  />
                   <p className="text-muted-foreground">
                     Oria conserva intatto il fascino medievale con il castello svevo e la celebre Cripta delle Mummie 
                     sotto la Basilica Cattedrale.
@@ -238,9 +259,11 @@ const Dintorni = () => {
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="bg-muted rounded-md h-72 flex items-center justify-center">
-                  <p className="text-muted-foreground">[Immagine Torre Guaceto]</p>
-                </div>
+                <img 
+                  src={torreGuacetoImg} 
+                  alt="Torre Guaceto riserva naturale" 
+                  className="rounded-md h-72 w-full object-cover"
+                />
                 <p className="text-muted-foreground leading-relaxed">
                   Area Marina Protetta con 2.200 ettari di natura incontaminata.
                 </p>
@@ -277,9 +300,11 @@ const Dintorni = () => {
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="bg-muted rounded-md h-56 flex items-center justify-center">
-                  <p className="text-muted-foreground">[Immagine Marine di Carovigno]</p>
-                </div>
+                <img 
+                  src={carovignoImg} 
+                  alt="Marine di Carovigno" 
+                  className="rounded-md h-56 w-full object-cover"
+                />
                 <div className="grid md:grid-cols-3 gap-3">
                   <div className="text-center p-3 bg-card/50 rounded-md">
                     <p className="font-semibold text-foreground">Lido Specchiolla</p>
@@ -321,9 +346,11 @@ const Dintorni = () => {
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="bg-muted rounded-md h-80 flex items-center justify-center">
-                  <p className="text-muted-foreground">[Immagine Ostuni]</p>
-                </div>
+                <img 
+                  src={ostuniImg} 
+                  alt="Ostuni la città bianca" 
+                  className="rounded-md h-80 w-full object-cover"
+                />
                 <p className="text-muted-foreground leading-relaxed text-lg">
                   Ostuni domina la valle degli ulivi dalla sua collina a 200m sul mare. Il centro storico medievale 
                   tutto bianco è un labirinto incantevole di vicoli, scalinate e piazzette.
@@ -375,9 +402,11 @@ const Dintorni = () => {
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <div className="bg-muted rounded-md h-48 flex items-center justify-center">
-                    <p className="text-muted-foreground text-sm">[Immagine Alberobello]</p>
-                  </div>
+                  <img 
+                    src={alberobelloImg} 
+                    alt="Alberobello trulli UNESCO" 
+                    className="rounded-md h-48 w-full object-cover"
+                  />
                   <Badge variant="default" className="w-full justify-center">UNESCO Patrimonio dell'Umanità</Badge>
                   <p className="text-muted-foreground text-sm">
                     I Trulli UNESCO dal 1996. Un'esperienza unica tra le iconiche costruzioni coniche in pietra.
@@ -404,9 +433,11 @@ const Dintorni = () => {
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <div className="bg-muted rounded-md h-48 flex items-center justify-center">
-                    <p className="text-muted-foreground text-sm">[Immagine Locorotondo]</p>
-                  </div>
+                  <img 
+                    src={locorotondoImg} 
+                    alt="Locorotondo borgo più bello d'Italia" 
+                    className="rounded-md h-48 w-full object-cover"
+                  />
                   <Badge variant="default" className="w-full justify-center">Borghi più belli d'Italia</Badge>
                   <p className="text-muted-foreground text-sm">
                     Centro storico circolare con l'architettura tradizionale delle "cummerse" (tetti spioventi).
@@ -429,9 +460,11 @@ const Dintorni = () => {
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <div className="bg-muted rounded-md h-48 flex items-center justify-center">
-                    <p className="text-muted-foreground text-sm">[Immagine Cisternino]</p>
-                  </div>
+                  <img 
+                    src={cisterninoImg} 
+                    alt="Cisternino borgo medievale" 
+                    className="rounded-md h-48 w-full object-cover"
+                  />
                   <Badge variant="default" className="w-full justify-center">Borgo Medievale Autentico</Badge>
                   <p className="text-muted-foreground text-sm">
                     Famoso per le macellerie-bracerie tradizionali dove scegliere la carne e gustarla alla brace.
@@ -473,9 +506,11 @@ const Dintorni = () => {
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <div className="bg-muted rounded-md h-40 flex items-center justify-center">
-                    <p className="text-muted-foreground text-sm">[Immagine La Fera]</p>
-                  </div>
+                  <img 
+                    src={laFeraImg} 
+                    alt="La Fera di Latiano" 
+                    className="rounded-md h-40 w-full object-cover"
+                  />
                   <Badge variant="outline">Dal 1866</Badge>
                   <p className="text-muted-foreground">
                     La tradizionale fiera di Latiano che celebra "Suoni, Sapori e Tradizioni" con mercatini, 
@@ -496,9 +531,11 @@ const Dintorni = () => {
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <div className="bg-muted rounded-md h-40 flex items-center justify-center">
-                    <p className="text-muted-foreground text-sm">[Immagine Sagra Stacchioddi]</p>
-                  </div>
+                  <img 
+                    src={sagraStacchioddiImg} 
+                    alt="Sagra degli Stacchioddi Latiano" 
+                    className="rounded-md h-40 w-full object-cover"
+                  />
                   <Badge variant="outline">47ª edizione</Badge>
                   <p className="text-muted-foreground">
                     La sagra più attesa dell'anno in Piazza Umberto I, ristorante a cielo aperto dedicato 
@@ -519,8 +556,8 @@ const Dintorni = () => {
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <div className="bg-muted rounded-md h-40 flex items-center justify-center">
-                    <p className="text-muted-foreground text-sm">[Immagine Festa in Masseria]</p>
+                  <div className="bg-primary/5 rounded-md h-40 flex items-center justify-center border-2 border-dashed border-primary/20">
+                    <p className="text-muted-foreground text-sm text-center px-4">🎵 Festa in Masseria - Agosto</p>
                   </div>
                   <Badge variant="outline">32ª edizione</Badge>
                   <p className="text-muted-foreground">
@@ -584,9 +621,11 @@ const Dintorni = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="bg-muted rounded-md h-48 flex items-center justify-center mb-4">
-                    <p className="text-muted-foreground text-sm">[Immagine Prodotti Tipici]</p>
-                  </div>
+                  <img 
+                    src={prodottiTipiciImg} 
+                    alt="Prodotti tipici pugliesi" 
+                    className="rounded-md h-48 w-full object-cover mb-4"
+                  />
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
                       <Badge variant="outline" className="mt-0.5">DOP</Badge>
@@ -614,9 +653,11 @@ const Dintorni = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="bg-muted rounded-md h-48 flex items-center justify-center mb-4">
-                    <p className="text-muted-foreground text-sm">[Immagine Cantine/Frantoi]</p>
-                  </div>
+                  <img 
+                    src={cantineFrantoiImg} 
+                    alt="Cantine e frantoi della Puglia" 
+                    className="rounded-md h-48 w-full object-cover mb-4"
+                  />
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     Il territorio di Latiano è punteggiato da masserie storiche che producono olio e vino 
                     secondo antiche tradizioni.
