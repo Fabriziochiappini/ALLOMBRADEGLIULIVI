@@ -53,18 +53,6 @@ const ReviewsSection = () => {
           </p>
         </div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {stats.map((stat, index) => (
-            <Card key={index} className="p-6 text-center hover-elevate">
-              <div className="font-serif text-3xl font-bold text-primary mb-2">
-                {stat.value}<span className="text-lg">{stat.suffix}</span>
-              </div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
-            </Card>
-          ))}
-        </div>
-
         {/* Reviews Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {reviews.map((review, index) => (
