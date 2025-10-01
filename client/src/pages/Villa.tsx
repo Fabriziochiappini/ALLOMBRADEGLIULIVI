@@ -40,6 +40,12 @@ import interior4 from "@assets/Immagine 2025-09-28 164722_1759071422100.png";
 import interior5 from "@assets/Immagine 2025-09-28 164804_1759071422099.png";
 import interior6 from "@assets/Immagine 2025-09-28 164825_1759071422099.png";
 
+// Additional photos for relax spaces
+import relax1 from "@assets/WhatsApp Image 2025-09-25 at 10.56.22_1759071455443.jpeg";
+import relax2 from "@assets/WhatsApp Image 2025-09-25 at 10.56.23_1759071455442.jpeg";
+import relax3 from "@assets/WhatsApp Image 2025-09-25 at 10.56.25_1759071455442.jpeg";
+import relax4 from "@assets/WhatsApp Image 2025-09-25 at 10.56.47_1759071455440.jpeg";
+
 const exteriorPhotos = [
   { src: pool1, alt: "Piscina vista 1" },
   { src: pool2, alt: "Piscina vista 2" },
@@ -60,6 +66,15 @@ const interiorPhotos = [
   { src: interior4, alt: "Interno villa" },
   { src: interior5, alt: "Cucina moderna" },
   { src: interior6, alt: "Spazio interno" }
+];
+
+const relaxPhotos = [
+  { src: relax1, alt: "Spazi esterni relax" },
+  { src: relax2, alt: "Area esterna villa" },
+  { src: relax3, alt: "Giardino e relax" },
+  { src: relax4, alt: "Zona esterna" },
+  { src: pool2, alt: "Piscina e relax" },
+  { src: garden1, alt: "Giardino con ulivi" }
 ];
 
 function PhotoGallery({ photos, title }: { photos: typeof exteriorPhotos; title: string }) {
@@ -289,6 +304,13 @@ export default function Villa() {
               })}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Galleria Altri Spazi di Relax */}
+      <section className="py-8 bg-card">
+        <div className="container mx-auto px-4">
+          <PhotoGallery photos={relaxPhotos} title="Altri Spazi di Relax e Servizi" />
         </div>
       </section>
 
