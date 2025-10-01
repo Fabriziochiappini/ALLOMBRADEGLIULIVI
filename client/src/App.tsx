@@ -5,12 +5,15 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ScrollToTop from "@/components/ScrollToTop";
+import CookieBanner from "@/components/CookieBanner";
 import Home from "@/pages/Home";
 import Villa from "@/pages/Villa";
 import ChiSiamo from "@/pages/ChiSiamo";
 import Dintorni from "@/pages/Dintorni";
 import ComeRaggiungerci from "@/pages/ComeRaggiungerci";
 import Contatti from "@/pages/Contatti";
+import Privacy from "@/pages/Privacy";
+import Terms from "@/pages/Terms";
 import AdminLogin from "@/pages/AdminLogin";
 import AdminDashboard from "@/pages/AdminDashboard";
 import NotFound from "@/pages/not-found";
@@ -24,6 +27,8 @@ function Router() {
       <Route path="/dintorni" component={Dintorni} />
       <Route path="/come-raggiungerci" component={ComeRaggiungerci} />
       <Route path="/contatti" component={Contatti} />
+      <Route path="/privacy" component={Privacy} />
+      <Route path="/terms" component={Terms} />
       <Route path="/admin/login" component={AdminLogin} />
       <Route path="/admin" component={AdminDashboard} />
       {/* Fallback to 404 */}
@@ -40,6 +45,7 @@ function App() {
         <Toaster />
         <Router />
         <FloatingWhatsApp />
+        <CookieBanner />
       </TooltipProvider>
     </QueryClientProvider>
   );
