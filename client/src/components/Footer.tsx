@@ -86,7 +86,18 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-background/20">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="text-background/60 text-sm">
-              © 2024 Villa all'Ombra degli Ulivi, Latiano. Tutti i diritti riservati.
+              <div>© 2025 Villa all'Ombra degli Ulivi, Latiano. Tutti i diritti riservati.</div>
+              <div className="mt-1">
+                Sito web realizzato da{" "}
+                <a 
+                  href="https://webproitalia.com" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-primary/80 transition-colors font-medium"
+                >
+                  WEBPROITALIA
+                </a>
+              </div>
             </div>
             
             {/* Social Links */}
