@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart, Users, MapPin, Star } from "lucide-react";
+import heroImage from "@assets/WhatsApp Image 2025-09-25 at 10.56.46_1759071455441.jpeg";
 
 export default function ChiSiamo() {
   return (
@@ -9,8 +10,13 @@ export default function ChiSiamo() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative h-96 bg-gradient-to-r from-primary/20 to-secondary/20">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section className="relative h-96">
+        <img 
+          src={heroImage} 
+          alt="Giardino con ulivi" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/30"></div>
         <div className="relative container mx-auto px-4 h-full flex items-center">
           <div className="text-center text-white max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-serif font-bold mb-4">
