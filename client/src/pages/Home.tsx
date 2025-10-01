@@ -4,7 +4,7 @@ import GreenOasisSection from "@/components/GreenOasisSection";
 import WelcomeSection from "@/components/WelcomeSection";
 import RoomsSection from "@/components/RoomsSection";
 import ReviewsSection from "@/components/ReviewsSection";
-import LocationSection from "@/components/LocationSection";
+import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
 
 const Home = () => {
@@ -16,7 +16,7 @@ const Home = () => {
       <WelcomeSection />
       <RoomsSection />
       <ReviewsSection />
-      <LocationSection />
+      <CtaSection />
       <Footer />
     </div>
   );

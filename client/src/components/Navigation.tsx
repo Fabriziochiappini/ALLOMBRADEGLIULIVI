@@ -12,6 +12,7 @@ const Navigation = () => {
     { href: "/", label: "Home" },
     { href: "/villa", label: "La Villa" },
     { href: "/chi-siamo", label: "Chi Siamo" },
+    { href: "/dintorni", label: "Dintorni" },
     { href: "/come-raggiungerci", label: "Come Raggiungerci" },
     { href: "/contatti", label: "Contatti" },
   ];
