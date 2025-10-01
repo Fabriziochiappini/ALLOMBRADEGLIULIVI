@@ -80,16 +80,6 @@ const RoomsSection = () => {
           </p>
         </div>
 
-        {/* Amenities */}
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mb-16">
-          {amenities.map((amenity, index) => (
-            <Card key={index} className="p-4 text-center hover-elevate">
-              <amenity.icon className="w-8 h-8 text-primary mx-auto mb-2" />
-              <p className="text-sm font-medium text-foreground">{amenity.label}</p>
-            </Card>
-          ))}
-        </div>
-
         {/* Bedrooms */}
         <div className="mb-16">
           <h3 className="font-serif text-2xl font-bold text-foreground mb-8 text-center">
