@@ -172,6 +172,35 @@ export default function Contatti() {
 
               <Card className="hover-elevate">
                 <CardHeader>
+                  <Mail className="h-8 w-8 text-primary mb-2" />
+                  <CardTitle>Email</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">
+                    Scrivici via email per informazioni dettagliate o 
+                    richieste specifiche sulla prenotazione.
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-center">
+                      <span className="font-medium text-sm break-all">antonelloprete10@gmail.com</span>
+                    </div>
+                    <Button 
+                      asChild
+                      variant="outline" 
+                      className="w-full"
+                      data-testid="button-email-contact"
+                    >
+                      <a href="mailto:antonelloprete10@gmail.com">
+                        <Mail className="w-4 h-4 mr-2" />
+                        Invia Email
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="hover-elevate">
+                <CardHeader>
                   <MapPin className="h-8 w-8 text-primary mb-2" />
                   <CardTitle>Posizione</CardTitle>
                 </CardHeader>
