@@ -98,6 +98,7 @@ const LocationSection = () => {
                   </div>
                   <Button 
                     size="sm"
+                    className="bg-[#25D366] hover:bg-[#20BA5A] text-white border-transparent"
                     onClick={handleWhatsAppClick}
                     data-testid="button-whatsapp-contact"
                   >
@@ -198,6 +199,7 @@ const LocationSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg"
+                className="bg-[#25D366] hover:bg-[#20BA5A] text-white border-transparent"
                 onClick={handleWhatsAppClick}
                 data-testid="button-whatsapp-cta"
               >

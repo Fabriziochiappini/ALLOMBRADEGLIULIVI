@@ -59,9 +59,8 @@ const Footer = () => {
             <h3 className="font-semibold text-lg text-background">Prenota Subito</h3>
             <div className="space-y-3">
               <Button 
-                variant="secondary"
                 size="sm"
-                className="w-full justify-start"
+                className="w-full justify-start bg-[#25D366] hover:bg-[#20BA5A] text-white border-transparent"
                 onClick={handleWhatsAppClick}
                 data-testid="button-footer-whatsapp"
               >

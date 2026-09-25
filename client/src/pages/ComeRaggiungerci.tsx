@@ -244,7 +244,7 @@ export default function ComeRaggiungerci() {
                 </p>
                 <div className="flex justify-center gap-4">
                   <Badge variant="outline">+39 377 393 8627</Badge>
-                  <Badge variant="outline">WhatsApp disponibile</Badge>
+                  <Badge className="bg-[#25D366] hover:bg-[#25D366] text-white border-transparent">WhatsApp disponibile</Badge>
                 </div>
               </CardContent>
             </Card>

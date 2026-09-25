@@ -370,7 +370,7 @@ export default function Villa() {
               </Button>
               <Button 
                 size="lg" 
-                variant="outline"
+                className="bg-[#25D366] hover:bg-[#20BA5A] text-white border-transparent"
                 onClick={() => window.open('https://wa.me/393773938627', '_blank')}
                 data-testid="button-whatsapp-cta"
               >

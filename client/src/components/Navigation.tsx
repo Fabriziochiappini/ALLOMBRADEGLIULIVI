@@ -64,7 +64,7 @@ const Navigation = () => {
             <Phone className="w-4 h-4 mr-2" />
             Chiama Ora
           </Button>
-          <Button size="sm" onClick={handleWhatsApp} data-testid="button-whatsapp">
+          <Button size="sm" className="bg-[#25D366] hover:bg-[#20BA5A] text-white border-transparent" onClick={handleWhatsApp} data-testid="button-whatsapp">
             WhatsApp
           </Button>
         </div>
@@ -84,7 +84,7 @@ const Navigation = () => {
                   <Phone className="w-4 h-4 mr-2" />
                   +39 377 393 8627
                 </Button>
-                <Button className="w-full" onClick={handleWhatsApp} data-testid="button-whatsapp-mobile">
+                <Button className="w-full bg-[#25D366] hover:bg-[#20BA5A] text-white border-transparent" onClick={handleWhatsApp} data-testid="button-whatsapp-mobile">
                   WhatsApp
                 </Button>
               </div>
