@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ChevronLeft, ChevronRight, Star, Users, Wifi, Car, PawPrint, Wind } from "lucide-react";
+import { ChevronLeft, ChevronRight, Star, Users, Wifi, Car, PawPrint, Wind, MessageCircle } from "lucide-react";
 import heroImage from "@assets/WhatsApp Image 2025-09-25 at 10.56.42 (1)_1759071455441.jpeg";
 import poolImage from "@assets/WhatsApp Image 2025-09-25 at 10.56.43_1759071455441.jpeg";
 import interior1 from "@assets/Immagine 2025-09-28 164834_1759071422097.png";
@@ -107,13 +107,17 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8"
-                data-testid="button-book-now"
+              {/* Prenotazioni solo su WhatsApp (richiesta di Antonello, 25/09/2026) */}
+              <a
+                href="https://wa.me/393773938627?text=Ciao%2C%20vorrei%20prenotare%20la%20Villa%20all%27Ombra%20degli%20Ulivi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 rounded-md bg-[#25D366] hover:bg-[#20BA5A] text-white font-bold text-lg md:text-xl px-8 py-4 shadow-2xl transition-colors"
+                data-testid="button-book-whatsapp"
               >
-                Prenota Ora
-              </Button>
+                <MessageCircle className="w-7 h-7 shrink-0" />
+                Per prenotare chiama su WhatsApp
+              </a>
               <Button 
                 size="lg" 
                 variant="outline" 

@@ -391,11 +391,11 @@ const Dintorni = () => {
                 Villa all'Ombra degli Ulivi è il punto di partenza ideale per esplorare tutte queste meraviglie. 
                 Contattaci per prenotare il tuo soggiorno indimenticabile.
               </p>
-              <Link href="/contatti">
-                <Button size="lg" className="text-lg px-8" data-testid="button-contact-cta1">
-                  Prenota Ora
+              <a href="https://wa.me/393773938627" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="text-lg px-8 bg-[#25D366] hover:bg-[#20BA5A] text-white" data-testid="button-contact-cta1">
+                  Per prenotare chiama su WhatsApp
                 </Button>
-              </Link>
+              </a>
             </CardContent>
           </Card>
         </div>
